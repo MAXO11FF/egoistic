@@ -1,0 +1,105 @@
+.container {
+    max-width: 800px; /* Adjusted width for larger content */
+    margin: 80px auto; /* Adjusted top margin */
+    background-color: rgba(30, 30, 30, 0.8); /* Stylish dark background */
+    padding: 40px; /* Increased padding for better spacing */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Enhanced box shadow */
+    position: relative; /* Ensure it stays above the video */
+    z-index: 1; /* Ensure it stays above the video */
+    overflow: hidden; /* Hide overflow */
+}
+
+h1 {
+    font-size: 2.5em; /* Adjusted font size for larger heading */
+    color: #eee; /* Text color */
+    text-align: center; /* Center align text */
+}
+
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden; /* Hide overflow to make typing animation work */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+p {
+    font-size: 1.1em; /* Adjusted font size for larger text */
+    color: #ddd; /* Text color */
+    text-align: center; /* Center align text */
+}
+
+.discord-button {
+    display: inline-block;
+    background-color: #4a4a4a; /* Dark color for the button */
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px; /* Larger button text */
+    padding: 15px 30px; /* More padding for larger button */
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow for button */
+    display: block; /* Ensure button takes full width */
+    margin: 20px auto; /* Center align button */
+}
+
+.discord-button:hover {
+    background-color: #333; /* Darken slightly on hover */
+}
+
+/* Background video styling */
+#bg-video {
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind all other content */
+    object-fit: cover; /* Ensure the video covers the entire container without distortion */
+}
+
+/* Owner bars */
+.owner-bar {
+    position: fixed;
+    top: 6px;
+    right: 355px; /* Adjusted to align with the right side */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.owner {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Spacing between owners */
+}
+
+.owner-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.owner-info {
+    color: white;
+    max-width: 200px; /* Limiting width for owner info */
+    white-space: nowrap; /* Preventing text wrapping */
+    overflow: hidden; /* Hiding overflow text */
+    text-overflow: ellipsis; /* Showing ellipsis for overflow text */
+}
+
+.owner-name {
+    font-weight: bold;
+    margin: 0;
+    overflow: hidden; /* Hiding overflow text */
+    text-overflow: ellipsis; /* Showing ellipsis for overflow text */
+}
+
+.owner-role {
+    font-size: 0.9em;
+    margin: 0;
+    opacity: 0.8;
+}

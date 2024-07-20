@@ -1,0 +1,94 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGOISTIC COMMUNITY Discord Server</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet for cleaner code -->
+    <style id="dynamic-styles"></style> <!-- Placeholder for dynamic styles -->
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Member, welcome to 'Egoistic'
+            Our 'Egoistic' is made in order to provide you good friendships, a good environment, friendly staffs, giveaways and events!</h1>
+        <p>Join our vibrant community on Discord!</p>
+        <p>Click the button below to join:</p>
+        <a class="discord-button" href="https://discord.com/invite/96t7G2YSd3" target="_blank">Join || Egoistic Community || Social ~ Active ~ Vc ~ Dating</a>
+
+        <!-- Rules Button -->
+        <a class="rules-button" href="rules.html" target="_blank">Rules</a>
+    </div>
+
+    <!-- Background video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="wallpaper.webm" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Owner bar -->
+    <div class="owner-bar">
+        <!-- Owner 1 -->
+        <div class="owner">
+            <img class="owner-avatar" src="pic.gif" alt="Owner's Profile Picture">
+            <div class="owner-info">
+                <p class="owner-name">☆ 𝑺𝑨𝑻𝑶𝑹𝑼 𝑮𝑶𝑱𝑶 ☆</p>
+                <p class="owner-role">Server Owner</p>
+            </div>
+        </div>
+
+        <!-- Owner 2 -->
+        <div class="owner">
+            <img class="owner-avatar" src="pic2.webp" alt="Second Owner's Profile Picture">
+            <div class="owner-info">
+                <p class="owner-name">.drugerz</p>
+                <p class="owner-role">Server Co-Owner</p>
+            </div>
+        </div>
+
+        <!-- Owner 3 -->
+        <div class="owner">
+            <img class="owner-avatar" src="pic3.png" alt="Third Owner's Profile Picture">
+            <div class="owner-info">
+                <p class="owner-name">singlesky</p>
+                <p class="owner-role">Server Co-Owner</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle animation and dynamic styles
+        document.addEventListener('DOMContentLoaded', function() {
+            var ownerBar = document.querySelector('.owner-bar');
+            ownerBar.style.animation = 'ownerBarFadeIn 1s forwards';
+            
+            // Define dynamic styles (JSS)
+            var dynamicStyles = `
+                @keyframes ownerBarFadeIn {
+                    0% {
+                        transform: translateY(-100px);
+                        opacity: 0;
+                    }
+                    100% {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            `;
+            
+            // Inject dynamic styles into the head of the document
+            var styleElement = document.getElementById('dynamic-styles');
+            styleElement.innerHTML = dynamicStyles;
+
+            // Ensure the animation only runs once
+            var animationRan = false;
+            window.addEventListener('scroll', function() {
+                if (!animationRan && window.scrollY > 50) {
+                    ownerBar.style.animationPlayState = 'running';
+                    animationRan = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
